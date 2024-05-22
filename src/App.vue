@@ -14,14 +14,26 @@ useHead({
     },
     {
       name: 'theme-color',
-      content: () => isDark.value ? '#00aba9' : '#ffffff',
+      content: () => (isDark.value ? '#00aba9' : '#ffffff'),
     },
   ],
   link: [
     {
       rel: 'icon',
       type: 'image/svg+xml',
-      href: () => preferredDark.value ? '/favicon-dark.svg' : '/favicon.svg',
+      href: () =>
+        preferredDark.value
+          ? '/varlet/favicon-dark.svg'
+          : '/varlet/favicon.svg',
+    },
+    {
+      rel: 'apple-touch-icon',
+      href: '/varlet/apple-touch-icon.png',
+    },
+    {
+      rel: 'mask-icon',
+      color: '#f6d2d2',
+      href: '/varlet/safari-pinned-tab.png',
     },
   ],
 })
